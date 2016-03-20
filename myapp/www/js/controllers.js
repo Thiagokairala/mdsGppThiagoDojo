@@ -1,6 +1,12 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+.controller('DashCtrl', ['$scope', function($scope) {
+  $scope.name = "thiago";
+
+  $scope.showName = function() {
+    alert($scope.name);
+  };
+}])
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
